@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <h1> pri progress juan pablo camelo</h1>
+                <div class="progress m-t-20">
+                    <div class="progress-bar bg-info progress-bar-striped active" 
+                         style="height:10px;"
+                         [style.width]="getProgress"
+                         role="progressbar">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" 
+                                type="button" (click)=cambiarValor(-1)>
+                            <i class="fa fa-minus"></i>
+                        </button>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Product name">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button"
+                        (click)=cambiarValor(1)>
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                3
+            </div>
+        </div>
+    </div>
+</div>
