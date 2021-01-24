@@ -13,13 +13,12 @@ export class ProgressComponent implements OnInit {
   }
 
   cambiarValor(valor: number){
-    this.progress = this.progress + valor; 
-    
+    this.progress = this.progress + valor;     
   }
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void  {
   }
 
 }
