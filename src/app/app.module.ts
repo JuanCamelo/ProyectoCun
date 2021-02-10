@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -16,7 +17,8 @@ import { Grafica1Component } from './pages/grafica1/grafica1.component';
 import { PagesComponent } from './pages/pages.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-
+import { PaginatePipe } from './pipes/paginate.pipe';
+import { ServicesService} from '../app/service/services.service'
 
 @NgModule({
   declarations: [
@@ -31,11 +33,16 @@ import { environment } from '../environments/environment';
     ProgressComponent,
     Grafica1Component,
     PagesComponent,
+    PaginatePipe,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+  ],
+  providers:[
+    ServicesService
   ],
   bootstrap: [AppComponent]
 })
